@@ -8,7 +8,7 @@ const bookingList = props => (
       return (
         <li key={booking._id} className="bookings__item">
           <div className="bookings__item-data">
-            {booking.event.title} -{' '}
+            <h2>{booking.event.title}</h2>
             {new Date(booking.createdAt).toLocaleDateString()}
           </div>
           <div className="bookings__item-actions">

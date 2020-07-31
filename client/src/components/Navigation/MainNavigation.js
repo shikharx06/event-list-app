@@ -1,16 +1,18 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-import AuthContext from '../../context/auth-context';
-import './MainNavigation.css';
+import AuthContext from "../../context/auth-context";
+import "./MainNavigation.css";
 
-const mainNavigation = props => (
+const mainNavigation = (props) => (
   <AuthContext.Consumer>
-    {context => {
+    {(context) => {
       return (
         <header className="main-navigation">
           <div className="main-navigation__logo">
-            <h1>EasyEvent</h1>
+            <NavLink to="/events">
+              <h1>EventList</h1>
+            </NavLink>
           </div>
           <nav className="main-navigation__items">
             <ul>

@@ -1,0 +1,15 @@
+.auth-div {
+  color: #5101d1;
+  text-align: center;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-form {
+  color: black;
+  width: 25rem;
+  max-width: 80%;
+  margin: 3rem auto;
+}
+

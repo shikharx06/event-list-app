@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "dev": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,8 +19,10 @@
     "express-graphql": "^0.7.1",
     "graphql": "^14.0.2",
     "jsonwebtoken": "^8.4.0",
-    "mongoose": "^5.9.26",
-    "nodemon": "^1.18.7"
+    "mongoose": "^5.9.26"
+    
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
 }

@@ -6,6 +6,7 @@ const path = require("path");
 const graphQlSchema = require("./graphql/schema/index");
 const graphQlResolvers = require("./graphql/resolvers/index");
 const isAuth = require("./middleware/is-auth");
+const { db } = require("./models/user");
 
 const app = express();
 const port = process.env.PORT || 8000;
@@ -44,9 +45,9 @@ mongoose
     `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.powbv.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`
   )
   .then(() => {
+    console.log("connected to db......");
     app.listen(port);
   })
   .catch((err) => {
     console.log(err);
   });
-

@@ -2,6 +2,7 @@
   "env": {
     "MONGO_USER": "demouser",
     "MONGO_PASSWORD": "ZAPKeC3JPJTPZlq2",
-    "MONGO_DB": "demo-event-app"
+    "MONGO_DB": "demo-event-app",
+    "NODE_ENV": "production"
   }
 }

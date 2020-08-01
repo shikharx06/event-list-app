@@ -11,12 +11,13 @@ const app = express();
 const port = process.env.PORT || 8000;
 app.use(bodyParser.json());
 
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("client/build"));
-//   app.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-//   });
-// }
+if (process.env.NODE_ENV === "production") {
+  console.log("heloooooo");
+  app.use(express.static(__dirname + "/client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
+}
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST,GET,OPTIONS");
@@ -38,13 +39,14 @@ app.use(
   })
 );
 
-mongoose
-  .connect(
-    `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.powbv.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`
-  )
-  .then(() => {
-    app.listen(port);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// mongoose
+//   .connect(
+//     `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.powbv.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`
+//   )
+//   .then(() => {
+//     app.listen(port);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+app.listen(port);

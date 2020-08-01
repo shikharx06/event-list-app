@@ -2,7 +2,7 @@
 
 the live website can be found here: https://sinewolfeventapp.herokuapp.com/
 
-- you can login using username: example@user.com and password: 123456  or sign up with new credentials.
+- you can login using username: example@user.com and password: 12345  or sign up with new credentials.
 - **note**: it might take some time to load the website because heroku server shuts it down after 30 min of inactivity
 - it has authorization (login and signup), event creation, view, and booking system.
 

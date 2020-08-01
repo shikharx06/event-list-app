@@ -8,4 +8,4 @@ the live website can be found here: https://sinewolfeventapp.herokuapp.com/
 
 BUGS:
 
-- i did'nt have time to validate the user signing in so if incorrect details are entered, it won't do anything.
+- i didn't have time to validate the user signing in so if incorrect details are entered, it won't do anything.

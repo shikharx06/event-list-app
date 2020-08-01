@@ -97,11 +97,15 @@ class AuthPage extends Component {
         <h1>{this.state.isLogin ? "Login" : "Signup"}</h1>
         <form className="auth-form" onSubmit={this.submitHandler}>
           <div className="form-control">
-            <label htmlFor="email">E-Mail</label>
-            <input type="email" id="email" ref={this.emailEl} />
+            <label htmlFor="email" required>
+              E-Mail
+            </label>
+            <input type="email" id="email" ref={this.emailEl} minLength="5" />
           </div>
           <div className="form-control">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password" required>
+              Password
+            </label>
             <input type="password" id="password" ref={this.passwordEl} />
           </div>
           <div className="form-actions">

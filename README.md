@@ -1,17 +1,11 @@
-# GraphQL + React Event Booking API
-This code belongs to a tutorial series: [https://github.com/academind/yt-graphql-react-event-booking-api.git](https://github.com/academind/yt-graphql-react-event-booking-api.git)
+# react event booking app using graphql
 
-Learn how to build a GraphQL API (with Node.js) and a React.js frontend from scratch in this series.
+the live website can be found here: https://sinewolfeventapp.herokuapp.com/
 
-# Usage
-Choose the right branch in this repository to get the code for the different parts of the series.
+- you can login using username: example@user.com and password: 123456
+- **note**: it might take some time to load the website because heroku server shuts it down after 30 min of inactivity
+- it has authorization (login and signup), event creation, view, and booking system.
 
-Install all dependencies
-```sh
-npm install
-```
+BUGS:
 
-Run the server
-```sh
-npm start
-```
+- i did'nt have time to validate the user signing in so if incorrect details are entered, it won't do anything.
